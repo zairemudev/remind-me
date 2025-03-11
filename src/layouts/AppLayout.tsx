@@ -15,12 +15,12 @@ const AppLayout = ({ children }: Props) => {
       <div
         className={`${
           isDarkMode ? "dark" : ""
-        } h-screen w-screen flex flex-col`}
+        } h-screen w-screen flex flex-col min-w-sm max-w-md mx-auto`}
       >
         {/* header */}
         <Header />
         {/* container */}
-        <main className="mx-auto flex flex-col flex-1 min-w-sm max-w-md gap-6 px-4 h-full overflow-hidden bg-gray-50 dark:bg-slate-800">
+        <main className="flex flex-col flex-1 gap-6 px-4 h-full overflow-hidden bg-gray-50 dark:bg-slate-800">
           {children}
         </main>
 

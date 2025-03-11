@@ -10,12 +10,8 @@ function App() {
   const [goalInput, setGoalInput] = useState<string>("");
 
   // global state
-  const addGoal = useAppStore((state) => state.addGoal);
-  const setGoals = useAppStore((state) => state.setGoals);
-  const loadGoals = useAppStore((state) => state.loadGoals);
-  const getCheckedGoal = useAppStore((state) => state.getCheckedGoal);
-  const getTotalGoal = useAppStore((state) => state.getTotalGoal);
-  const goals = useAppStore((state) => state.goals);
+  const { goals, getCheckedGoal, getTotalGoal, addGoal, loadGoals } =
+    useAppStore();
 
   // functions
   const handleAddGoal = () => {
@@ -36,10 +32,6 @@ function App() {
   };
 
   useEffect(() => {
-    // let goals = localStorage.getItem("goals");
-    // if (goals) {
-    //   setGoals(JSON.parse(goals));
-    // }
     loadGoals();
   }, []);
 

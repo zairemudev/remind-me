@@ -9,8 +9,7 @@ type GoalItemProps = {
 
 const GoalItem = ({ data }: GoalItemProps) => {
   // global state
-  const checkGoal = useAppStore((state) => state.checkGoal);
-  const deleteGoal = useAppStore((state) => state.deleteGoal);
+  const { checkGoal, deleteGoal } = useAppStore();
 
   const handleDeleteGoal = (id: string) => {
     try {
