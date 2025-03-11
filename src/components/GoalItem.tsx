@@ -38,7 +38,7 @@ const GoalItem = ({ data }: GoalItemProps) => {
       <div
         className={`${
           data.isDone ? "italic line-through" : "not-italic"
-        } flex-1`}
+        } flex-1 break-all`}
       >
         {data.name}
       </div>

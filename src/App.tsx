@@ -1,4 +1,4 @@
-import { Plus } from "lucide-react";
+import { Check, Plus, Trash2 } from "lucide-react";
 import AppLayout from "./layouts/AppLayout";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -80,7 +80,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-4 py-5 px-6 h-full max-w-full overflow-y-scroll">
+        <div className="flex flex-col gap-4 py-5 px-6 h-full max-w-full">
           {goals.map((goal) => (
             <GoalItem key={goal.id} data={goal} />
           ))}
